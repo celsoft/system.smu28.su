@@ -13,6 +13,8 @@ $fieldOptions2 = [
     'options' => ['class' => 'form-group has-feedback'],
     'inputTemplate' => "{input}<span class='glyphicon glyphicon-lock form-control-feedback'></span>"
 ];
+
+$this->registerCss(".login-copy { text-align: center; font-size: 12px; padding-top: 15px; }");
 ?>
 
 <div class="login-box">
@@ -45,7 +47,8 @@ $fieldOptions2 = [
 
         <?php ActiveForm::end(); ?>
 
-
     </div>
+
+    <div class="login-copy">Copyright &copy; <?= date('Y') ?> <a href="http://celsoft.ru" target="_blank">Максим Мартынов</a>. All rights reserved.</div>
 
 </div>
