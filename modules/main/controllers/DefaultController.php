@@ -23,7 +23,7 @@ class DefaultController extends Controller
             $this->layout = "@app/modules/main/views/layouts/login";
             $model = new LoginForm();
             if ($model->load(Yii::$app->request->post()) && $model->login()) {
-                return $this->goHome();
+                return $this->redirect('/operator');
             } else {
                 return $this->render('login', [
                     'model' => $model,
