@@ -19,6 +19,9 @@ $config = [
         'user' => [
             'class' => 'app\modules\user\Module',
         ],
+        'operator' => [
+            'class' => 'app\modules\operator\Module',
+        ],
     ],
     'components' => [
         'request' => [

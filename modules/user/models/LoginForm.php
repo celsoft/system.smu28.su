@@ -28,6 +28,14 @@ class LoginForm extends Model
         ];
     }
 
+    public function attributeLabels()
+    {
+        return [
+            'username' => 'Логин',
+            'password' => 'Пароль',
+        ];
+    }
+
     /**
      * Validates the username and password.
      * This method serves as the inline validation for password.
@@ -38,7 +46,7 @@ class LoginForm extends Model
             $user = $this->getUser();
 
             if (!$user || !$user->validatePassword($this->password)) {
-                $this->addError($attribute, 'Неверное имя пользователя или пароль.');
+                $this->addError($attribute, 'Неверный логин или пароль.');
             }
 
         }

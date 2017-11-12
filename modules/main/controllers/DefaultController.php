@@ -30,6 +30,6 @@ class DefaultController extends Controller
                 ]);
             }
         }
-        return $this->render('index');
+        return $this->redirect('/operator');
     }
 }
