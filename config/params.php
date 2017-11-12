@@ -1,5 +1,7 @@
 <?php
 
 return [
-    'adminEmail' => 'admin@example.com',
+    'adminEmail' => 'maksim_blg@mail.ru',
+    'supportEmail' => 'administrator@celsoft.ru',
+    'core.name' => 'Система заявок',
 ];

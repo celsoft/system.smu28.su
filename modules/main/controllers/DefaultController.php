@@ -2,7 +2,9 @@
 
 namespace app\modules\main\controllers;
 
+use Yii;
 use yii\web\Controller;
+use app\modules\user\models\LoginForm;
 
 class DefaultController extends Controller
 {
@@ -17,6 +19,17 @@ class DefaultController extends Controller
 
     public function actionIndex()
     {
+        if ( Yii::$app->user->isGuest ){
+            $this->layout = "@app/modules/main/views/layouts/login";
+            $model = new LoginForm();
+            if ($model->load(Yii::$app->request->post()) && $model->login()) {
+                return $this->goHome();
+            } else {
+                return $this->render('login', [
+                    'model' => $model,
+                ]);
+            }
+        }
         return $this->render('index');
     }
 }
