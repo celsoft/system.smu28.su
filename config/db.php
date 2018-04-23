@@ -2,9 +2,9 @@
 
 return [
     'class' => 'yii\db\Connection',
-    'dsn' => 'mysql:host=localhost;dbname=system_smu28_su',
-    'username' => 'root',
-    'password' => '',
+    'dsn' => 'mysql:host=mp3boom.mysql.tools;dbname=mp3boom_syssmu',
+    'username' => 'mp3boom_syssmu',
+    'password' => 'sndythmc',
     'charset' => 'utf8',
 
     // Schema cache options (for production environment)
